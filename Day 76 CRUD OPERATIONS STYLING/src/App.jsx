@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { use } from "react";
+import { useState } from "react";
+import { nanoid } from "nanoid"; // ✅ Import nanoid
 import Create from "./components/Create";
 import Read from "./components/Read";
 
@@ -8,9 +10,9 @@ const App = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+    <div>
       <Create todos={todos} settodo={settodo} />
-      <hr className="my-8 w-full max-w-xl border-t border-gray-300" />
+      <hr />
       <Read todos={todos} settodo={settodo} />
     </div>
   );
